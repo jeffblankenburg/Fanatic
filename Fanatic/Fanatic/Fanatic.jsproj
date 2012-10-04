@@ -54,6 +54,9 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="default.html" />
+    <Content Include="home.css" />
+    <Content Include="home.html" />
+    <Content Include="home.js" />
     <Content Include="images\bg_baseball.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
