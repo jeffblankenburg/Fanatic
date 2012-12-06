@@ -7,39 +7,35 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    xmlns:local="clr-namespace:FanaticWP.Controls"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait">
 
-    <phone:Panorama Title="fanatic">
-        <phone:Panorama.Background>
-            <ImageBrush ImageSource="Assets/images/bg_baseball.png" />
-        </phone:Panorama.Background>
-        <phone:PanoramaItem Header="your teams">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="10" />
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="10" />
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="10" />
-                    <RowDefinition Height="200" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-                <local:LiveTileType2 />
-            </Grid>
-        </phone:PanoramaItem>
-        <phone:PanoramaItem Header="friends">
-        </phone:PanoramaItem>
-        <phone:PanoramaItem Header="badges">
-        </phone:PanoramaItem>
-    </phone:Panorama>
-
+    <Grid>
+        <Grid.Background>
+            <ImageBrush x:Name="BackgroundImage" ImageSource="Assets/images/Baseball.png" />
+        </Grid.Background>
+        <StackPanel Margin="0,50,0,0">
+            <Image Grid.Row="0" Source="Assets/logo.png" Width="400" />
+            <TextBlock Text="EMAIL  ADDRESS" Width="375" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" Margin="0,50,0,-10" />
+            <TextBox InputScope="EmailNameOrAddress" Height="75" Width="400" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" />
+            <TextBlock Text="PASSWORD" Width="375" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" Margin="0,30,0,-10" />
+            <PasswordBox Height="75" Width="400" />
+            <StackPanel x:Name="NameBox" Visibility="Collapsed">
+                <TextBlock Text="FIRST  NAME" Width="375" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" Margin="0,30,0,-10" />
+                <TextBox x:Name="FirstName" Height="75" Width="400" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" />
+                <TextBlock Text="LAST  NAME" Width="375" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" Margin="0,30,0,-10" />
+                <TextBox x:Name="LastName" Height="75" Width="400" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" />
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Opacity=".2">
+            <shell:ApplicationBarIconButton x:Name="NewUserButton" IconUri="/Assets/AppBar/new.png" Text="new user" Click="NewUserButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="LogInButton" IconUri="/Assets/AppBar/next.png" Text="log in" Click="LogInButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="HelpButton" IconUri="/Assets/AppBar/questionmark.png" Text="help" Click="HelpButton_Click" />
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

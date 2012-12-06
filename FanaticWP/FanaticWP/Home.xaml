@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="FanaticWP.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:local="clr-namespace:FanaticWP.Controls"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait">
+
+    <phone:Panorama Title="fanatic" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas">
+        <phone:Panorama.Background>
+            <ImageBrush ImageSource="Assets/images/bg_baseball.png" Opacity=".6" />
+        </phone:Panorama.Background>
+        <phone:PanoramaItem Header="your stats">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="1" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Image Source="Assets/images/leagues/mlb/CLE.png" />
+                <TextBlock Text="6,958" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Image Grid.Row="2" Source="Assets/images/leagues/nfl/CLE.png" />
+                <TextBlock Text="2,945" Grid.Row="2" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Rectangle Fill="White" Grid.Row="4" Grid.ColumnSpan="2" />
+                <TextBlock Text="TOTAL" Grid.Row="5" Grid.Column="0" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Text="9,953" Grid.Row="5" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="your teams">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="200" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="10" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <local:LiveTileType2 MouseLeftButtonDown="Team_Tap" />
+            </Grid>
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="friends">
+        </phone:PanoramaItem>
+        <phone:PanoramaItem Header="badges">
+        </phone:PanoramaItem>
+    </phone:Panorama>
+
+</phone:PhoneApplicationPage>
