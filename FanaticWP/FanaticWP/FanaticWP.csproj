@@ -107,6 +107,7 @@
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="LoginEvent.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -115,6 +116,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TeamDetail.xaml.cs">
+      <DependentUpon>TeamDetail.xaml</DependentUpon>
     </Compile>
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
@@ -141,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -186,6 +194,7 @@
     <Content Include="Assets\images\leagues\mlb\CHC.png" />
     <Content Include="Assets\images\leagues\mlb\CHW.png" />
     <Content Include="Assets\images\leagues\mlb\CIN.png" />
+    <Content Include="Assets\images\leagues\mlb\CLE.jpg" />
     <Content Include="Assets\images\leagues\mlb\CLE.png" />
     <Content Include="Assets\images\leagues\mlb\COL.png" />
     <Content Include="Assets\images\leagues\mlb\DET.png" />
@@ -254,6 +263,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="MobileServicesManagedClient, Version=0.2.0.0">
+      <Name>Windows Azure Mobile Services Managed Client</Name>
+    </SDKReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

@@ -12,6 +12,14 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait">
+	<phone:PhoneApplicationPage.Resources>
+		<Storyboard x:Name="TwentiethOfASecond">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="animationTarget">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.025" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</phone:PhoneApplicationPage.Resources>
 
     <phone:Panorama Title="fanatic" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas">
         <phone:Panorama.Background>
@@ -33,12 +41,17 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Image Source="Assets/images/leagues/mlb/CLE.png" />
-                <TextBlock Text="6,958" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="Team1Score" Text="6,958" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Image Grid.Row="2" Source="Assets/images/leagues/nfl/CLE.png" />
-                <TextBlock Text="2,945" Grid.Row="2" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="Team2Score" Text="2,945" Grid.Row="2" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <Rectangle Fill="White" Grid.Row="4" Grid.ColumnSpan="2" />
                 <TextBlock Text="TOTAL" Grid.Row="5" Grid.Column="0" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <TextBlock Text="9,953" Grid.Row="5" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="TotalScore" Text="9,953" Grid.Row="5" Grid.Column="1" FontFamily="/FanaticWP;component/Fonts/Fonts.zip#Bebas" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock x:Name="animationTarget" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="267,101,0,0" Grid.Row="6" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="33" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+                	<TextBlock.RenderTransform>
+                		<CompositeTransform/>
+                	</TextBlock.RenderTransform>
+                </TextBlock>
             </Grid>
         </phone:PanoramaItem>
         <phone:PanoramaItem Header="your teams">

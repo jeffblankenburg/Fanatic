@@ -15,13 +15,9 @@ namespace FanaticWP
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
         public MainPage()
         {
             InitializeComponent();
-
-            // Sample code to localize the ApplicationBar
-            //BuildLocalizedApplicationBar();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -117,8 +113,11 @@ namespace FanaticWP
             SetAppBar(0);
         }
 
-        private void LogInButton_Click(object sender, EventArgs e)
+        private async void LogInButton_Click(object sender, EventArgs e)
         {
+            //LoginEvent le = new LoginEvent { user_id = 1 };
+            //await App.MobileService.GetTable<LoginEvent>().InsertAsync(le);
+
             NavigationService.Navigate(new Uri("/Home.xaml", UriKind.Relative));
         }
 

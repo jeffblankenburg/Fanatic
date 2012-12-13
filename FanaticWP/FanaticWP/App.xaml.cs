@@ -7,6 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using FanaticWP.Resources;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace FanaticWP
 {
@@ -17,6 +18,8 @@ namespace FanaticWP
         /// </summary>
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
+
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://fanatic.azure-mobile.net/", "pPttGRbOtuzZZICqJrSOnKMHKNZYFm88");
 
         /// <summary>
         /// Constructor for the Application object.
