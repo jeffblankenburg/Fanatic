@@ -113,7 +113,7 @@ namespace FanaticWP
             SetAppBar(0);
         }
 
-        private async void LogInButton_Click(object sender, EventArgs e)
+        private  void LogInButton_Click(object sender, EventArgs e)
         {
             //LoginEvent le = new LoginEvent { user_id = 1 };
             //await App.MobileService.GetTable<LoginEvent>().InsertAsync(le);

@@ -94,12 +94,23 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Badge.cs" />
+    <Compile Include="Controls\LiveTileType4.xaml.cs">
+      <DependentUpon>LiveTileType4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LiveTileType3.xaml.cs">
+      <DependentUpon>LiveTileType3.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\LiveTileType1.xaml.cs">
       <DependentUpon>LiveTileType1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\LiveTileType2.xaml.cs">
       <DependentUpon>LiveTileType2.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TeamStats2.xaml.cs">
+      <DependentUpon>TeamStats2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Friend.cs" />
     <Compile Include="Help.xaml.cs">
       <DependentUpon>Help.xaml</DependentUpon>
     </Compile>
@@ -120,6 +131,9 @@
     <Compile Include="TeamDetail.xaml.cs">
       <DependentUpon>TeamDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TeamStats.xaml.cs">
+      <DependentUpon>TeamStats.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ticket.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
@@ -128,6 +142,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="Controls\LiveTileType4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\LiveTileType3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\LiveTileType1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -135,6 +157,10 @@
     <Page Include="Controls\LiveTileType2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamStats2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Help.xaml">
       <SubType>Designer</SubType>
@@ -149,6 +175,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TeamDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamStats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +209,19 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\ApplicationIcon2.png" />
+    <Content Include="Assets\ApplicationIcon3.png" />
+    <Content Include="Assets\ApplicationIcon4.png" />
+    <Content Include="Assets\bg_football.jpg" />
+    <Content Include="Assets\football.jpg" />
+    <Content Include="Assets\icons\alert.png" />
+    <Content Include="Assets\icons\badges\BeenToTen.png" />
+    <Content Include="Assets\icons\badges\TheBeatdown.png" />
+    <Content Include="Assets\icons\Facebook.png" />
+    <Content Include="Assets\icons\football.png" />
+    <Content Include="Assets\icons\LinkedIn.png" />
+    <Content Include="Assets\icons\Twitter.png" />
+    <Content Include="Assets\icons\Untappd.png" />
     <Content Include="Assets\images\Baseball.png" />
     <Content Include="Assets\images\Basketball.png" />
     <Content Include="Assets\images\bg_baseball.png" />
@@ -220,8 +263,11 @@
     <Content Include="Assets\images\leagues\mlb\TOR.png" />
     <Content Include="Assets\images\leagues\mlb\WAS.png" />
     <Content Include="Assets\images\leagues\mls\MLS.png" />
+    <Content Include="Assets\images\leagues\nba\CHA.jpg" />
+    <Content Include="Assets\images\leagues\nba\CHA.png" />
     <Content Include="Assets\images\leagues\nfl\ARI.png" />
     <Content Include="Assets\images\leagues\nfl\ATL.png" />
+    <Content Include="Assets\images\leagues\nfl\CAR.png" />
     <Content Include="Assets\images\leagues\nfl\CLE.png" />
     <Content Include="Assets\images\leagues\nfl\NFL.png" />
     <Content Include="Assets\images\leagues\nhl\NHL.png" />
@@ -229,6 +275,13 @@
     <Content Include="Assets\images\Soccer.png" />
     <Content Include="Assets\images\Tennis.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\photos\dan.jpg" />
+    <Content Include="Assets\photos\harry.jpg" />
+    <Content Include="Assets\photos\headshot1.png" />
+    <Content Include="Assets\photos\jacs.jpg" />
+    <Content Include="Assets\photos\mark.jpg" />
+    <Content Include="Assets\photos\matt.jpg" />
+    <Content Include="Assets\photos\scott.jpg" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -261,9 +314,7 @@
       <AutoFill>True</AutoFill>
     </BlendEmbeddedFont>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <SDKReference Include="MobileServicesManagedClient, Version=0.2.0.0">
       <Name>Windows Azure Mobile Services Managed Client</Name>

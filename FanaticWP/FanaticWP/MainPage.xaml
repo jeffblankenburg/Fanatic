@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush x:Name="BackgroundImage" ImageSource="Assets/images/Baseball.png" />
+            <ImageBrush x:Name="BackgroundImage" ImageSource="Assets/football.jpg" />
         </Grid.Background>
         <StackPanel Margin="0,50,0,0">
             <Image Grid.Row="0" Source="Assets/logo.png" Width="400" />

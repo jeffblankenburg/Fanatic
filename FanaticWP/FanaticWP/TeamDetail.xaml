@@ -16,10 +16,10 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="Assets/images/leagues/mlb/CLE.jpg" Stretch="None" Opacity=".2" />
+            <ImageBrush ImageSource="Assets/images/leagues/nba/CHA.jpg" Stretch="None" Opacity=".2" />
         </Grid.Background>
         <!--Pivot Control-->
-        <phone:Pivot Title="CLEVELAND INDIANS">
+        <phone:Pivot Title="CHARLOTTE BOBCATS">
             <!--Pivot item one-->
             <phone:PivotItem Header="top fans">
                 <Grid/>
